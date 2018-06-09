@@ -2,7 +2,11 @@
 
 {% block content %}
 <div class="container">
-  {{ id }}
+    <div class="panel panel-default">
+        <div class="panel-heading">{{ article.title }}</div>
+        <div class="panel-body">
+          {{ article.content | safe }}
+        </div>
+      </div>
 </div>
-
 {% endblock %}

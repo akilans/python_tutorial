@@ -1,0 +1,20 @@
+{% from "includes/_form_helpers.html" import render_field %}
+{% extends "layout.html" %}
+{% block content %}
+<h1>Add Article Form</h1>
+
+<form method="post" action="{{ url_for('add_article') }}">
+  <div class="form-group">
+    {{ render_field(add_article_form.title,class_="form-control") }}
+  </div>
+
+  <div class="form-group">
+    {{ render_field(add_article_form.content,class_="form-control",id="editor") }}
+  </div>
+
+  <p>
+    <input type="submit" class="btn btn-primary" value="Add" />
+  </p>
+
+</form>
+{% endblock %}
