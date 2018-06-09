@@ -1,14 +1,18 @@
 class Parent():
-	def name(self):
-		print("Father name is Subramanian");
-		
+
+	def __init__(self,name):
+		self.name = name
+
+	def getName(self):
+		print("Father name is %s" % self.name)
+	
 class Child(Parent):
-	pass
+	#pass
+	def getName(self):
+		print("Son name is %s" % self.name)
 
-		
-appa = Parent();
-son = Child();
+appa = Parent("Subramanian")
+son = Child("Akilan")
 
-appa.name();
-son.name();
-
+appa.getName()
+son.getName()
