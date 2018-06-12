@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, flash, redirect, session, logging, request
+from flask import Flask, render_template, url_for, flash, redirect, session, logging, request, make_response, jsonify
 #from data import Articles
 from flask_mysqldb import MySQL
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
@@ -20,6 +20,15 @@ app.config['MYSQL_CURSORCLASS'] = "DictCursor"
 #Init MYSQL_DB
 
 mysql = MySQL(app)
+
+# Count the number of clicks
+@app.before_request
+def before_request():
+    if not 'count' in session:
+        session['count'] = 1
+    else:
+        session['count'] += 1
+
 
 @app.route('/')
 def index():
@@ -195,6 +204,51 @@ def logout():
     session.clear()
     flash("Logout success!!!",'success')
     return redirect(url_for('login'))
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html')
+
+
+@app.route('/text')
+def text():
+    return render_template('text.txt'), 200, {'Content-Type': 'text/plain'}
+
+
+@app.route('/xml')
+def xml():
+    return '<h1>this is shown as <b>XML</b> in the browser</h1>', 200, \
+           {'Content-Type': 'application/xml'}
+
+
+@app.route('/json')
+def json():
+    return jsonify({'first_name': 'John', 'last_name': 'Smith'})
+
+
+@app.route('/redirect')
+def redir():
+    return redirect(url_for('text'))
+
+
+@app.route('/cookie')
+def cookie():
+    resp = redirect(url_for('index'))
+    resp.set_cookie('cookie', 'Hello, I\'m a cookie')
+    return resp
+
+
+@app.route('/error')
+def error():
+    return 'Bad Request', 400
+
+
+@app.route('/response')
+def response():
+    resp = make_response(render_template('text.txt'))
+    resp.headers['Content-Type'] = 'text/plain'
+    return resp
+
 
 if __name__ == "__main__":
     app.run(debug=True,host="127.0.0.1",port=8000)
