@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+/*background-color: #f8f8f8 !important;*/
+}
+.infy-r-services-bar-bg, .infy-r-industries-bar-bg, .infy-r-products-bar-bg, .infy-r-home-bar-bg {
+	background-image: none !important;
+	background-color: #fff !important;
+}
+div[class*="infy-r"] a.infy-r-header_title, .infy-r-prod-sublist li a, .infy-r-prod-sublist li a:hover, .infy-r-prod-sublist li a:link, .infy-r-prod-sublist li a:visited, .infy-r-main-page-head h2.infy-r-h2, .infy-r-main-page-head h2.infy-r-h2 {
+	color: #000!important;
+}
+div[class*="infy-r"] a.infy-r-header_title {
+	background-image: url("/sitecollectionimages/responsive/menuHeaderArrow-black.png")!important;
+}
+/*.top_header {
+	display: none !important;
+}*/
+#header-2 {
+	box-shadow: 2px 2px 5px #f8f8f8 !important;
+}
+.infy-r-menu_ul li a {
+	color: #000 !important;
+	font-size: 16px !important;
+}
+.infy-r-menu_icon > img {
+	left: 5px!important;
+	position: relative!important;
+	top: 1px!important;
+}
+.infy-r-menuIcon_mobile, .infy-r-menu_icon {
+	margin: 0!important;
+}
+.infy-r-icons_right {
+	background-color: #112c3d!important;
+	border-radius: 50%!important;
+	height: 40px!important;
+	margin: 4px 0!important;
+	padding: 0!important;
+	width: 40px!important;
+}
+.search_cont {
+	border: 0!important;/*width: 150px!important;*/
+}
+.infy-r-footer_content {
+	background-color: #f8f8f8 !important;
+	border-top: 1px solid #d8d8d8 !important;
+}
+.infy-r-footer_h1 {
+	color: #000 !important;
+	font-size: 22px !important;
+	font-weight: 900 !important;
+}
+.infy-r-footer_ul li a {
+	color: #777777 !important;
+	font-size: 16px !important;
+}
+div[class*="infy-r-"] a.ft_link {
+	color: #000 !important;
+}
+.infy-r-section_trending {
+	background-color: #fff!important;
+}
+.infy-r-footer_top {
+	border-top: 5px solid #d8d8d8;
+}
+.infy-r-footer_bottom {
+	background: #fff!important;
+}
+.infy-r-copyright {
+	color: #000 !important;
+	font-size: 14px!important;
+}
+.infy-r-bestViewed {
+	border: none !important;
+}
+.infy-r-menuSection {
+	box-shadow: 2px 2px 5px #ccc!important;
+}
+.infy-r-prod-sublist li a.active {
+	border-bottom: 1px solid #000 !important;
+}
+footer {
+	border: none!important;
+}
+#trending_title, #trending_title a {
+	color: #475055!important;
+	font-size: 24px!important;
+	font-weight: 700!important;
+}
+/*.infy-r-slidingHamMenu {
+	background-color: #61B8D1 !important;
+	background: -moz-linear-gradient(152deg, rgba(86,193,208,1) 40%, #61B8D1 170%) !important;
+	background: -webkit-gradient(152deg, rgba(86,193,208,1) 40%, #61B8D1 170%) !important; 
+	background: -webkit-linear-gradient(152deg, rgba(86,193,208,1) 40%, #61B8D1 170%) !important; 
+	background: linear-gradient(152deg, rgba(86,193,208,1) 40%, #61B8D1 170%) !important; 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(86,193,208,1) ', endColorstr='#61B8D1', GradientType=1 ) !important;
+}*/
+.infy-r-slidingHamMenu {
+	background-color: #fff!important;
+	box-shadow: -1px -1px 5px #ccc!important;
+}
+.infy-r-subMenu_ul li a, .infy-r-slidingClose, .infy-r-bestViewedTxt {
+	color: #000 !important;
+}
+.bc_text {
+	background: transparent url("/sitecollectionimages/responsive/new-caret-black.png") no-repeat scroll 95% center !important;
+	border: 1px solid #000!important;
+	color: #000!important;
+}
+.infy-r-subMenu_ul li div.option_style {
+	box-shadow: 2px 2px 5px #ccc !important;
+}
+#ctl00_headerinfosyscms1_ulSlidingMenu > li:nth-child(1), #ctl00_headerinfosyscms1_ulSlidingMenu > li:nth-child(2), #ctl00_headerinfosyscms1_ulSlidingMenu > li:nth-child(3), #ctl00_headerinfosyscms1_ulSlidingMenu > li:nth-child(4) {
+	font-weight: 900 !important;
+}
+.infy-r-subMenu_ul li:nth-child(n+5) a {
+	padding: 0px 30px !important;
+	margin: 5px 0 !important;
+}
+.infy-r-subMenu_ul li.first {
+	border: none !important;
+}
+
+@media screen and (max-width: 767px) {
+.infy-r-icons_right li:first-child {
+	/*display: none !important;*/
+	margin-left: -50px;
+}
+.infy-r-icons_right li:nth-child(2) {
+	margin-left: 19px;
+}
+.search_cont {
+	border: 0!important;/*width: 100% !important;*/
+}
+.infy-r-icons_right {
+	background-color: transparent !important;
+	border-radius: 0;
+	height: auto !important;
+	margin: 0;
+	padding: 0;
+	width: auto !important;
+}
+.infy-r-menuIcon_mobile, .infy-r-menu_icon {
+	background-color: #112c3d;
+	border-radius: 50%;
+	color: #475055;
+	float: right;
+	font-size: 1.714em;
+	height: 40px;
+	margin: 0;
+	width: 40px;
+}
+.infy-r-menu_icon > img {
+	left: 9px !important;
+	position: relative;
+	top: 1px;
+}
+}
